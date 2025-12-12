@@ -1,0 +1,237 @@
+/* Inline CSS */
+/* ============================
+   THEME COLOR – UNGU PREMIUM
+   ============================ */
+:root {
+    --primary: #ffffff;
+    --secondary: #a855f7;       /* Ungu utama */
+    --accent: #c084fc;          /* Ungu terang */
+    --dark: #4c1d95;            /* Ungu gelap elegan */
+    --light: #faf5ff;
+    --gradient-primary: linear-gradient(135deg, #8b5cf6, #a855f7, #c084fc);
+    --gradient-blue: linear-gradient(135deg, #8b5cf6, #a855f7); /* dipake di scrollbar */
+}
+
+/* ============================
+   BACKGROUND GLOBAL
+   ============================ */
+body {
+    background: linear-gradient(135deg,
+        #9b5cff 0%,
+        #6f2bdc 25%,
+        #d9cffa 50%,
+        #0b0414 75%,
+        #2b003b 100%);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    backdrop-filter: blur(5px);
+    user-select: none;
+}
+
+/* ============================
+   NOTIFICATION
+   ============================ */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    font-size: 12px;
+    display: none;
+    z-index: 1001;
+    max-width: 300px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: slideInRight 0.3s ease-out;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(168, 85, 247, 0.35);
+}
+
+.notification.success {
+    background: rgba(168, 85, 247, 0.9);
+}
+
+.notification.error {
+    background: rgba(239, 68, 68, 0.9);
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ============================
+   BUTTON UNGU ELEGAN
+   ============================ */
+button,
+.popup-button {
+    background: var(--gradient-primary);
+    border: none;
+    padding: 14px 20px;
+    border-radius: 14px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 10px 25px rgba(168, 85, 247, 0.4);
+}
+
+button:hover,
+.popup-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(192, 132, 252, 0.6);
+}
+
+.popup-button.secondary {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.popup-button.secondary:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ============================
+   POPUP ELEGAN
+   ============================ */
+.popup {
+    background: linear-gradient(145deg, rgba(76, 29, 149, 0.95), rgba(59, 7, 100, 0.9));
+    border-radius: 24px;
+    padding: 40px;
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    box-shadow: 0 35px 60px rgba(168, 85, 247, 0.35);
+    backdrop-filter: blur(20px);
+}
+
+/* ============================
+   SCROLLBAR UNGU
+   ============================ */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gradient-primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #a855f7, #c084fc);
+}
+
+/* ============================
+   RESPONSIVE POPUP
+   ============================ */
+@media (max-width: 768px) {
+    .popup {
+        padding: 30px 25px;
+        max-width: 90%;
+    }
+    .popup-title {
+        font-size: 24px;
+    }
+    .popup-icon {
+        font-size: 60px;
+    }
+    .popup-buttons {
+        grid-template-columns: 1fr;
+    }
+}
+
+        /* Notification */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    border: white;
+    font-size: 12px;
+    display: none;
+    z-index: 1001;
+    max-width: 300px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: slideInRight 0.3s ease-out;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* FIX ANIMASI – TADI KURUNG TERTUTUP HILANG */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Warna Notifikasi */
+.notification.success {
+    background: rgba(168, 85, 247, 0.9); /* UNGU */
+}
+
+.notification.error {
+    background: rgba(239, 68, 68, 0.9);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #8b5cf6, #a855f7);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #a855f7, #c084fc);
+}
+
+/* Responsive Popup */
+@media (max-width: 768px) {
+    .popup {
+        padding: 30px 25px;
+        max-width: 90%;
+    }
+
+    .popup-title {
+        font-size: 24px;
+    }
+
+    .popup-icon {
+        font-size: 60px;
+    }
+
+    .website-link {
+        font-size: 14px;
+    }
+
+    .popup-buttons {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* External CSS  
+   https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
+*/
